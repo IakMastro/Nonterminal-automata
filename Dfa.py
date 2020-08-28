@@ -5,7 +5,7 @@ class Automata:
     curr_state: str
     final_state: dir
 
-    def get_states(self, lines):
+    def set_states(self, lines):
         self.sum_of_states = lines[0]
         self.alphabet = lines[1].split()
         self.curr_state = lines[2]
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     automata = Automata()
 
     with open("Dfa.txt", "r") as file:
-        automata.get_states(lines=file.read().split("\n"))
+        automata.set_states(lines=file.read().split("\n"))
 
     print(f"Information:\nSum of states: {automata.sum_of_states}")
     print(f"Alphabet: {automata.alphabet}")
